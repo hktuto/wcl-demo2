@@ -1,8 +1,8 @@
 import { ref } from '@nuxtjs/composition-api'
-import { defineStore, acceptHMRUpdate } from 'pinia'
+import { defineStore } from 'pinia'
 
 export const useAppStore = defineStore('app', () => {
-  const colorMode = ref()
+  // const colorMode = ref()
   const baseFontSize = ref('20px')
 
   const updateGlobalFontSize = (size: string) => {
@@ -12,6 +12,6 @@ export const useAppStore = defineStore('app', () => {
   return {
     updateGlobalFontSize,
     baseFontSize,
-    colorMode,
   }
+  
 })

@@ -1,4 +1,5 @@
 export default {
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head() {
     // Get i18n header option from nuxt i18n
@@ -40,7 +41,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['nuxt-helmet', '@nuxtjs/i18n'],
+  modules: ['nuxt-helmet', '@nuxtjs/i18n', '@nuxt/http'],
 
   i18n: {
     locales: [
@@ -52,15 +53,10 @@ export default {
     langDir: '~/locales/',
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    babel: {
-      // plugins: [
-      //   [
-      //     // 'component',
-      //     // { libraryName: 'element-ui', styleLibraryName: 'theme-chalk' },
-      //   ],
-      // ],
-    },
+  serverMiddleware: {
+    '/api': '~/api'
   },
+
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {},
 }

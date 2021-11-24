@@ -1,6 +1,6 @@
 <template>
   <AppContainer>
-    <div class="sibebar">s</div>
+    <Sidebar />
     <div class="content">
       <Nuxt />
     </div>
@@ -9,11 +9,12 @@
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import AppContainer from '~/components/Utils/AppContainer.vue'
+import AppContainer from '@/components/Utils/AppContainer.vue'
+import Sidebar from '@/components/Sidebar.vue'
 
 export default defineComponent({
   name: 'DefaultLayout',
-  components: { AppContainer },
+  components: { AppContainer, Sidebar },
   setup() {
     return {}
   },
@@ -23,15 +24,16 @@ export default defineComponent({
 <style lang="scss" scoped>
 .appContainer {
   display: grid;
-  grid-template-columns: minmax(60px, auto) 1fr;
+  grid-template-columns: min-content 1fr;
   align-content: stretch;
   height: 100vh;
-  .sibebar {
-    padding: var(--app-padding);
-    background: var(--side-bar-color);
+  > * {
+    overflow-y: auto;
+    overflow-x: hidden;
   }
-  .content {
-    padding: var(--app-padding);
+  @media (max-width: 640px){
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
   }
 }
 </style>

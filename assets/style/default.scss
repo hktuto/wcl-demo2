@@ -1,18 +1,30 @@
 @import '~/assets/style/variable.scss';
 
 :root {
-  --primary-color-900: $--color-primary;
-  --primary-color-800: #555;
-  --primary-color-700: #444;
-  --primary-color-600: #333;
+  --primary-color: $--color-primary;
   --app-padding: 12px;
-  --side-bar-color: #333;
+  --sidebar-background: rgba(20, 37, 47, 0.1);
+  --sidebar-color: rgb(122, 127, 128);
+  --background-color: #e6eef6;
+}
+
+.dark-mode {
+  --sidebar-color: rgb(82, 96, 99);
+  --sidebar-background: rgb(0,0,0,0.2);
+  --background-color: #1e3345;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, -apple-system,
+    BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html {
   font-size: var(--base-font-size);
   margin: 0;
   padding: 0;
+  background: var(--background-color);
 }
 
 body {

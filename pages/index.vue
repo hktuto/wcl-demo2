@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     {{ $t('greeting') }}
-    <input v-model="AppStore.baseFontSize" />
   </div>
 </template>
 

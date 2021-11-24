@@ -40,7 +40,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['nuxt-helmet', '@nuxtjs/i18n', '@nuxtjs/component-cache'],
+  modules: ['nuxt-helmet', '@nuxtjs/i18n'],
 
   i18n: {
     locales: [
@@ -55,12 +55,12 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
-      plugins: [
-        [
-          'component',
-          { libraryName: 'element-ui', styleLibraryName: 'theme-chalk' },
-        ],
-      ],
+      // plugins: [
+      //   [
+      //     // 'component',
+      //     // { libraryName: 'element-ui', styleLibraryName: 'theme-chalk' },
+      //   ],
+      // ],
     },
   },
 }

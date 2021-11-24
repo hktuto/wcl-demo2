@@ -66,3 +66,8 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss">
+@import '~/assets/style/variable.scss';
+@import '~element-ui/packages/theme-chalk/src/input';
+</style>

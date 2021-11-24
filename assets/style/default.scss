@@ -1,14 +1,12 @@
-$--color-primary: red;
-
-$--font-path: '~element-ui/lib/theme-chalk/fonts';
-
-@import '~element-ui/packages/theme-chalk/src/index';
+@import '~/assets/style/variable.scss';
 
 :root {
-  --primary-color-900: #fffff;
+  --primary-color-900: $--color-primary;
   --primary-color-800: #555;
   --primary-color-700: #444;
   --primary-color-600: #333;
+  --app-padding: 12px;
+  --side-bar-color: #333;
 }
 
 html {

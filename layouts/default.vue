@@ -1,6 +1,9 @@
 <template>
   <AppContainer>
-    <Nuxt />
+    <div class="sibebar">s</div>
+    <div class="content">
+      <Nuxt />
+    </div>
   </AppContainer>
 </template>
 
@@ -16,3 +19,19 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.appContainer {
+  display: grid;
+  grid-template-columns: minmax(60px, auto) 1fr;
+  align-content: stretch;
+  height: 100vh;
+  .sibebar {
+    padding: var(--app-padding);
+    background: var(--side-bar-color);
+  }
+  .content {
+    padding: var(--app-padding);
+  }
+}
+</style>

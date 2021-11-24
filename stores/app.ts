@@ -1,5 +1,5 @@
 import { ref } from '@nuxtjs/composition-api'
-import { defineStore } from 'pinia'
+import { defineStore, acceptHMRUpdate } from 'pinia'
 
 export const useAppStore = defineStore('app', () => {
   const colorMode = ref()

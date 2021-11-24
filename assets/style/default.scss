@@ -1,0 +1,23 @@
+$--color-primary: red;
+
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import '~element-ui/packages/theme-chalk/src/index';
+
+:root {
+  --primary-color-900: #fffff;
+  --primary-color-800: #555;
+  --primary-color-700: #444;
+  --primary-color-600: #333;
+}
+
+html {
+  font-size: var(--base-font-size);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

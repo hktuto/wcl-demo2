@@ -1,6 +1,7 @@
 <template>
   <div class="page">
-    <DpInput v-model="testValue"> </DpInput>
+    <DpInput v-model="testValue" label="test input"> </DpInput>
+    <DpButton type="primary">button</DpButton>
   </div>
 </template>
 
@@ -8,13 +9,18 @@
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 import DpInput from '~/components/ui/DpInput.vue'
 
+import { useTestStore } from '~/stores/test'
+import DpButton from '~/components/ui/DpButton.vue'
+
 export default defineComponent({
+  components: { DpInput, DpButton },
   setup() {
     const testValue = ref('')
+    const testStore = useTestStore()
     return {
       testValue,
+      testStore,
     }
   },
-  components: { DpInput },
 })
 </script>

@@ -1,69 +1,60 @@
-# wcl-demo
+# WCL Nuxtjs 學習用 repo
 
-## Build Setup
+## 設置
 
 ```bash
-# install dependencies
+# 安裝
 $ yarn install
 
-# serve with hot reload at localhost:3000
+# 本地運行
 $ yarn dev
 
-# build for production and launch server
+# 封裝
 $ yarn build
+
+# 生產環境運行
 $ yarn start
 
-# generate static project
-$ yarn generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## 學習內容
 
-## Special Directories
+---
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+### `Composition-api`
 
-### `assets`
+#### 優點
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+- 更容易將來升級到 vue 3
+- 更容易封裝相同邏輯的代碼
+- 不依賴於 vue ，可獨立運行 server 或 browser
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+[官方文件](https://composition-api.nuxtjs.org/)
 
-### `components`
+#### `Pinia`
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+#### 優點
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+- 更好的 vue-dev-tool 支持
+- 可直接配合 Composition-api 使用
+- 同樣不賴於 vue
 
-### `layouts`
+[官方文件](https://pinia.esm.dev/ssr/nuxt.html)
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+### `axios`
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+#### 優點
 
+- 可使用於 server 環境
+- 可設定共用的錯誤處理，重發請求，請求 header
 
-### `pages`
+[axios 中文文档](http://axios-js.com/zh-cn/docs/index.html)
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+### `scss`
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+#### 優點
 
-### `plugins`
+- 使用層級，可容易於閱讀
+- 可使用 function，更易管理和更新
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+[scss / sass 更詳細資料](https://www.sass.hk/docs/)

@@ -7,15 +7,22 @@
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
+    "noImplicitThis": false,
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@nuxt/types", "@types/node", "@nuxtjs/i18n", "@pinia/nuxt"]
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+      "@nuxtjs/i18n",
+      "@pinia/nuxt",
+      "@nuxtjs/color-mode"
+    ]
   },
 
   "exclude": ["node_modules", ".nuxt", "dist"]

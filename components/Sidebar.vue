@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from '#app'
 import Logo from '@/components/Logo.vue'
 import DpIcon from '@/components/ui/DpIcon.vue'
 import Menu from '@/components/Menu.vue'

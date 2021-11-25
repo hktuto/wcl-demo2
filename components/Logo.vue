@@ -1,9 +1,9 @@
 <template>
-  <img :src="`/images/logo-${mode}-${$colorMode.value}.svg`" />
+  <img :src="`/images/logo-${mode}-${$colorMode.value === 'system' ? 'dark' : $colorMode.value}.svg`" />
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 export default defineComponent({
   props: {

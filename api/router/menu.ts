@@ -15,4 +15,4 @@ router.get('/', (_,res) =>{
     })
 })
 
-module.exports = router
+export default router

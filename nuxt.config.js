@@ -1,30 +1,36 @@
-export default {
+import { defineNuxtConfig } from '@nuxt/bridge'
+
+export default defineNuxtConfig({
+
+  bridge: {
+    meta: true
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head() {
-    // Get i18n header option from nuxt i18n
-    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true }) || {htmlAttrs:{},meta:{}}
-    return {
-      title: 'wcl-demo',
-      htmlAttrs: {
-        style: '--base-font-size:16px;',
-        ...i18nHead.htmlAttrs,
-      },
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: '' },
-        { name: 'format-detection', content: 'telephone=no' },
-        ...i18nHead.meta,
-      ],
-      detectBrowserLanguage: {
-        useCookie: true,
-        cookieKey: 'i18n_redirected',
-        redirectOn: 'root',  // recommended
-      },
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    }
-  },
+  // head() {
+  //   // Get i18n header option from nuxt i18n
+  //   const i18nHead = this.$nuxtI18nHead ? this.$nuxtI18nHead({ addSeoAttributes: true }) : {htmlAttrs:[],meta:[]}
+  //   return {
+  //     title: 'wcl-demo',
+  //     htmlAttrs: {
+  //       style: '--base-font-size:16px;',
+  //       ...i18nHead.htmlAttrs,
+  //     },
+  //     meta: [
+  //       { charset: 'utf-8' },
+  //       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+  //       { hid: 'description', name: 'description', content: '' },
+  //       { name: 'format-detection', content: 'telephone=no' },
+  //       ...i18nHead.meta,
+  //     ],
+  //     detectBrowserLanguage: {
+  //       useCookie: true,
+  //       cookieKey: 'i18n_redirected',
+  //       redirectOn: 'root',  // recommended
+  //     },
+  //     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  //   }
+  // },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/style/default.scss'],
@@ -39,8 +45,6 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
-    '@nuxtjs/composition-api/module',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
   ],
@@ -64,4 +68,4 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-}
+})

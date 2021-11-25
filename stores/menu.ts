@@ -1,12 +1,12 @@
-import { ref, useAsync, useContext } from '@nuxtjs/composition-api'
 import { defineStore } from 'pinia'
+import { ref, useLazyAsyncData, useNuxtApp } from '#app'
 // import { api } from '~/utils/axios';
 
 export const useMenuStore = defineStore('menu', () => {
 
     // @ts-ignore
-    const { $http } = useContext();
-    const items = useAsync(async() => {
+    const { $http } = useNuxtApp()
+    const {data:items} = useLazyAsyncData( 'menuitems', async() => {
         const res = await $http.$get('/api/menu')
         return res.data
     })

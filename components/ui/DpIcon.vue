@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 import { Icon } from 'element-ui'
 export default defineComponent({
   components: { Icon },

@@ -3,7 +3,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head() {
     // Get i18n header option from nuxt i18n
-    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true }) || {}
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true }) || {htmlAttrs:{},meta:{}}
     return {
       title: 'wcl-demo',
       htmlAttrs: {

@@ -3,9 +3,9 @@ import { Router } from 'express';
 const router = Router();
 
 const menus: Menu = [
-    {id:1, label:"item a", url:'/a'},
-    {id:2, label:"item b", url:'/b'},
-    {id:3, label:"item c", url:'/c'},
+    {id:1, label:"a", url:'/a'},
+    {id:2, label:"b", url:'/b'},
+    {id:3, label:"c", url:'/c'},
 ]
 
 router.get('/', (_,res) =>{

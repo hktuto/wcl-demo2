@@ -17,6 +17,11 @@ export default {
         { name: 'format-detection', content: 'telephone=no' },
         ...i18nHead.meta,
       ],
+      detectBrowserLanguage: {
+        useCookie: true,
+        cookieKey: 'i18n_redirected',
+        redirectOn: 'root',  // recommended
+      },
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     }
   },
